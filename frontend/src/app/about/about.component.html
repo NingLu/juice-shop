@@ -7,30 +7,13 @@
   <mat-card class="mat-elevation-z6">
     <section class="about-us">
       <h1 translate>TITLE_ABOUT</h1>
-      <h3 translate>SECTION_CORPORATE_HISTORY</h3>
+      <h3 translate>Sensitive Data Protection on Amazon Web Services</h3>
       <p class="text-justify">
+        Sensitive Data Protection on Amazon Web Services is a solution that aims to help enterprises to automate the sensitive data discovery process and manage data assets on a single platform. This solution provides a web application capable of discovering and managing sensitive data across multiple Amazon Web Services accounts.
 
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-        diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+By using this solution, customers can achieve improved data security, compliance, and data management. The solution allows customers to create data catalogs, define sensitive data using built-in or customized data identification rules, and scan the data source (Amazon S3 or Amazon RDS) using a classification template. After the scan, customers can have an overview of their data assets and browse the data at the column level to understand where the data is, what it is, and its sensitivity levels. With this information, customers can take appropriate actions to secure sensitive data and comply with regulations such as GDPR, HIPAA, and PIPL.
 
-        Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu
-        feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril
-        delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-        sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-
-        <a href="ftp/legal.md" aria-label="Link to the Terms of Use" translate>LINK_TERMS_OF_USE</a>
-
-        At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-        Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-        ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos
-        erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum.
+Sensitive Data Protection on Amazon Web Services uses Amazon Glue Data Catalog, Amazon Glue Crawler, and the Amazon Glue PII Detection feature as key components to produce data catalogs and perform sensitive data discovery jobs for each Amazon Web Services account. It centralizes information such as data catalogs and data discovery results in a single place and provides a dashboard and detailed reports, making it easier for customers to manage their sensitive data protection efforts.
       </p>
 
       <h3><span translate>SECTION_CUSTOMER_FEEDBACK</span></h3>
@@ -42,24 +25,6 @@
                  [imageUrls]="slideshowDataSource">
       </slideshow>
 
-      <div *ngIf="twitterUrl || facebookUrl" class="social">
-        <h3><span translate="">SECTION_SOCIAL_MEDIA</span></h3>
-        <a *ngIf="twitterUrl" [href]="twitterUrl" target="_blank" rel="noopener noreferrer" style="margin-left: 0px;" aria-label="Button for the Twitter page of the shop">
-          <button mat-raised-button color="accent"><i class="fab fa-twitter fa-lg"></i> Twitter</button>
-        </a>
-        <a *ngIf="facebookUrl" [href]="facebookUrl" target="_blank" rel="noopener noreferrer" aria-label="Button for the Facebook page of the shop">
-          <button mat-raised-button color="accent"><i class="fab fa-facebook fa-lg"></i> Facebook</button>
-        </a>
-        <a *ngIf="slackUrl" [href]="slackUrl" target="_blank" rel="noopener noreferrer" aria-label="Button for the Slack page of the shop">
-          <button mat-raised-button color="accent"><i class="fab fa-slack fa-lg"></i> Slack</button>
-        </a>
-        <a *ngIf="redditUrl" [href]="redditUrl" target="_blank" rel="noopener noreferrer" aria-label="Button for the Reddit page of the shop">
-          <button mat-raised-button color="accent"><i class="fab fa-reddit fa-lg"></i> Reddit</button>
-        </a>
-        <a *ngIf="pressKitUrl" [href]="pressKitUrl" target="_blank" rel="noopener noreferrer" aria-label="Button for the PressKit page of the shop">
-          <button mat-raised-button color="accent"><i class="far fa-newspaper fa-lg"></i> Press Kit</button>
-        </a>
-      </div>
     </section>
   </mat-card>
 </div>

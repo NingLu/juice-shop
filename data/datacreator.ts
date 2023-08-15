@@ -338,22 +338,30 @@ async function createProducts () {
         ).then((persistedProduct) => {
           if (persistedProduct) {
             if (useForChristmasSpecialChallenge) { datacache.products.christmasSpecial = persistedProduct }
-            if (urlForProductTamperingChallenge) {
-              datacache.products.osaft = persistedProduct
-              datacache.challenges.changeProductChallenge.update({
-                description: customizeChangeProductChallenge(
-                  datacache.challenges.changeProductChallenge.description,
-                  config.get('challenges.overwriteUrlForProductTamperingChallenge'),
-                  persistedProduct)
-              })
+            try {
+              if (urlForProductTamperingChallenge) {
+                datacache.products.osaft = persistedProduct
+                  datacache.challenges.changeProductChallenge.update({
+                    description: customizeChangeProductChallenge(
+                      datacache.challenges.changeProductChallenge.description,
+                      config.get('challenges.overwriteUrlForProductTamperingChallenge'),
+                      persistedProduct)
+                  })
+                
+              }
+            } catch (error) {
             }
-            if (fileForRetrieveBlueprintChallenge && datacache.challenges.changeProductChallenge.hint) {
-              datacache.challenges.retrieveBlueprintChallenge.update({
-                hint: customizeRetrieveBlueprintChallenge(
-                  datacache.challenges.retrieveBlueprintChallenge.hint,
-                  persistedProduct)
-              })
+            try {
+              if (fileForRetrieveBlueprintChallenge && datacache.challenges.changeProductChallenge.hint) {
+                datacache.challenges.retrieveBlueprintChallenge.update({
+                  hint: customizeRetrieveBlueprintChallenge(
+                    datacache.challenges.retrieveBlueprintChallenge.hint,
+                    persistedProduct)
+                })
+              }
+            } catch (error) {
             }
+            
             if (deletedDate) void deleteProduct(persistedProduct.id) // TODO Rename into "isDeleted" or "deletedFlag" in config for v14.x release
           } else {
             throw new Error('No persisted product found!')
