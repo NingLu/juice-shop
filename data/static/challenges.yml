@@ -2,7 +2,7 @@
   name: '01. Deploy SDP Solution'
   category: 'Workshop'
   tags:
-    - SDP
+    - Mandatory
   description: 'Deploy SDP solution to your AWS account.'
   difficulty: 2
   hint: 'Deploy SDP solution to your AWS account'
@@ -13,7 +13,7 @@
   name: '02. Connect Agent'
   category: 'Workshop'
   tags:
-    - SDP
+    - Mandatory
   description: 'Connect an agent to SDP.'
   difficulty: 1
   hint: 'Connect an agent to SDP'
@@ -24,7 +24,7 @@
   name: '03. S3 Sensitive Data Detection'
   category: 'Workshop'
   tags:
-    - SDP
+    - Mandatory
   description: 'Create a discovery job and choose S3 as data source.'
   difficulty: 5
   hint: 'Create a discovery job and choose S3 as data source'
@@ -35,7 +35,7 @@
   name: '04. RDS Sensitive Data Detection'
   category: 'Workshop'
   tags:
-    - SDP
+    - Mandatory
   description: 'Create a discovery job and choose RDS as data source.'
   difficulty: 5
   hint: 'Create a discovery job and choose RDS as data source'
@@ -46,7 +46,7 @@
   name: '05. Create Custom Identifier'
   category: 'Workshop'
   tags:
-    - SDP
+    - Mandatory
   description: 'Create a custom identifier by regex.'
   difficulty: 3
   hint: 'Create a custom identifier by regex'
@@ -57,7 +57,7 @@
   name: '06. Sensitive Data Detection By Custom Identifier'
   category: 'Workshop'
   tags:
-    - SDP
+    - Mandatory
   description: 'Create a discovery job and use custom identifier.'
   difficulty: 6
   hint: 'Create a discovery job and use custom identifier'
@@ -68,7 +68,7 @@
   name: '07. Sensitive Data Summary'
   category: 'Workshop'
   tags:
-    - SDP
+    - Mandatory
   description: 'View sensitive data summary page.'
   difficulty: 2
   hint: 'View sensitive data summary page'
@@ -79,7 +79,7 @@
   name: '08. Least Priviledge'
   category: 'Workshop'
   tags:
-    - SDP
+    - Optional
   description: 'Find IAM role that not follow least priviledge.'
   difficulty: 2
   hint: 'Find IAM role that not follow least priviledge'
@@ -90,7 +90,7 @@
   name: '09. EBS Encryption'
   category: 'Workshop'
   tags:
-    - SDP
+    - Optional
   description: 'Check EBS encryption of the EC2 instance.'
   difficulty: 1
   hint: 'Check EBS encryption of the EC2 instance'
@@ -101,7 +101,7 @@
   name: '10. Confidential Document'
   category: 'Workshop'
   tags:
-    - SDP
+    - Optional
   description: 'Access a confidential document.'
   difficulty: 1
   hint: 'Analyze and tamper with links in the application that deliver a file directly.'
