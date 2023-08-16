@@ -109,4 +109,18 @@
   mitigationUrl: ~
   key: directoryListingChallenge
 
+-
+  name: '11. Login Admin'
+  category: 'Workshop'
+  tags:
+    - Optional
+  description: 'Log in with the administrator''s user account.'
+  difficulty: 2
+  hint: 'Try different SQL Injection attack patterns depending whether you know the admin''s email address or not.'
+  hintUrl: 'https://pwning.owasp-juice.shop/part2/injection.html#log-in-with-the-administrators-user-account'
+  mitigationUrl: 'https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html'
+  key: loginAdminChallenge
+  tutorial:
+    order: 5
+
 
