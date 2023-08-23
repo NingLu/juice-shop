@@ -10,62 +10,40 @@
   mitigationUrl: ''
   key: sdpDeploy
 -
-  name: '02. Connect Agent'
+  name: '02. Connect to data source'
   category: 'Workshop'
   tags:
     - Mandatory
-  description: 'Connect an agent to SDP.'
-  difficulty: 1
+  description: 'Connect an agent to SDP. After connection, the S3 buckets and RDS instances in the agent account will be available for scanning.'
+  difficulty: 3
   hint: 'Connect an agent to SDP'
   hintUrl: ''
   mitigationUrl: ''
   key: sdpConnect
 -
-  name: '03. S3 Sensitive Data Detection'
+  name: '03. Define classification template'
   category: 'Workshop'
   tags:
     - Mandatory
-  description: 'Create a discovery job and choose S3 as data source.'
-  difficulty: 5
-  hint: 'Create a discovery job and choose S3 as data source'
-  hintUrl: ''
-  mitigationUrl: ''
-  key: sdpS3Scan
--
-  name: '04. RDS Sensitive Data Detection'
-  category: 'Workshop'
-  tags:
-    - Mandatory
-  description: 'Create a discovery job and choose RDS as data source.'
-  difficulty: 5
-  hint: 'Create a discovery job and choose RDS as data source'
-  hintUrl: ''
-  mitigationUrl: ''
-  key: sdpRdsScan
--
-  name: '05. Create Custom Identifier'
-  category: 'Workshop'
-  tags:
-    - Mandatory
-  description: 'Create a custom identifier by regex.'
+  description: 'Define the data classification template which will be used by data discovery job.'
   difficulty: 3
-  hint: 'Create a custom identifier by regex'
+  hint: 'Define the data classification template'
   hintUrl: ''
   mitigationUrl: ''
-  key: sdpCreateCustom
+  key: sdpTemplate
 -
-  name: '06. Sensitive Data Detection By Custom Identifier'
+  name: '04. Run sensitive data discovery job'
   category: 'Workshop'
   tags:
     - Mandatory
-  description: 'Create a discovery job and use custom identifier.'
+  description: 'Create a discovery job and detect sensitive data in S3 and RDS.'
   difficulty: 6
-  hint: 'Create a discovery job and use custom identifier'
+  hint: 'Create a discovery job'
   hintUrl: ''
   mitigationUrl: ''
-  key: sdpCustomScan
+  key: sdpDataScan
 -
-  name: '07. Sensitive Data Summary'
+  name: '05. Check summary result'
   category: 'Workshop'
   tags:
     - Mandatory
@@ -74,9 +52,20 @@
   hint: 'View sensitive data summary page'
   hintUrl: ''
   mitigationUrl: ''
-  key: sdpSummary
+  key: sdpSummaryResult
 -
-  name: '08. Least Priviledge'
+  name: '06. Update catalog labels'
+  category: 'Workshop'
+  tags:
+    - Mandatory
+  description: 'Manually update the catalog labels.'
+  difficulty: 2
+  hint: 'Manually update the catalog labels.'
+  hintUrl: ''
+  mitigationUrl: ''
+  key: sdpUpdateCatalog
+-
+  name: '07. Least Priviledge'
   category: 'Workshop'
   tags:
     - Optional
@@ -87,7 +76,7 @@
   mitigationUrl: ''
   key: sdpEc2IamPolicy
 -
-  name: '09. EBS Encryption'
+  name: '08. EBS Encryption'
   category: 'Workshop'
   tags:
     - Optional
@@ -98,7 +87,7 @@
   mitigationUrl: ''
   key: sdpEbs
 -
-  name: '10. Confidential Document'
+  name: '09. Confidential Document'
   category: 'Workshop'
   tags:
     - Optional
@@ -110,7 +99,7 @@
   key: directoryListingChallenge
 
 -
-  name: '11. Login Admin'
+  name: '10. Login Admin'
   category: 'Workshop'
   tags:
     - Optional
