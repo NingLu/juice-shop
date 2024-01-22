@@ -1,115 +1,132 @@
 -
-  name: '01. Deploy SDP Solution'
+  name: '01. Access Provisioned AWS Console'
   category: 'Workshop'
   tags:
     - Mandatory
-  description: 'Deploy SDP solution to your AWS account.'
-  difficulty: 2
-  hint: 'Deploy SDP solution to your AWS account'
-  hintUrl: ''
-  mitigationUrl: ''
-  key: sdpDeploy
--
-  name: '02. Connect to data source'
-  category: 'Workshop'
-  tags:
-    - Mandatory
-  description: 'Connect an agent to SDP. After connection, the S3 buckets and RDS instances in the agent account will be available for scanning.'
-  difficulty: 3
-  hint: 'Connect an agent to SDP'
-  hintUrl: ''
-  mitigationUrl: ''
-  key: sdpConnect
--
-  name: '03. Define classification template'
-  category: 'Workshop'
-  tags:
-    - Mandatory
-  description: 'Define the data classification template which will be used by data discovery job.'
-  difficulty: 3
-  hint: 'Define the data classification template'
-  hintUrl: ''
-  mitigationUrl: ''
-  key: sdpTemplate
--
-  name: '04. Run sensitive data discovery job'
-  category: 'Workshop'
-  tags:
-    - Mandatory
-  description: 'Create a discovery job and detect sensitive data in S3 and RDS.'
-  difficulty: 6
-  hint: 'Create a discovery job'
-  hintUrl: ''
-  mitigationUrl: ''
-  key: sdpDataScan
--
-  name: '05. Check summary result'
-  category: 'Workshop'
-  tags:
-    - Mandatory
-  description: 'View sensitive data summary page.'
-  difficulty: 2
-  hint: 'View sensitive data summary page'
-  hintUrl: ''
-  mitigationUrl: ''
-  key: sdpSummaryResult
--
-  name: '06. Update catalog labels'
-  category: 'Workshop'
-  tags:
-    - Mandatory
-  description: 'Manually update the catalog labels.'
-  difficulty: 2
-  hint: 'Manually update the catalog labels.'
-  hintUrl: ''
-  mitigationUrl: ''
-  key: sdpUpdateCatalog
--
-  name: '07. Least Priviledge'
-  category: 'Workshop'
-  tags:
-    - Optional
-  description: 'Find IAM role that not follow least priviledge.'
-  difficulty: 2
-  hint: 'Find IAM role that not follow least priviledge'
-  hintUrl: ''
-  mitigationUrl: ''
-  key: sdpEc2IamPolicy
--
-  name: '08. EBS Encryption'
-  category: 'Workshop'
-  tags:
-    - Optional
-  description: 'Check EBS encryption of the EC2 instance.'
+  description: 'Login to the provisioned AWS console'
   difficulty: 1
-  hint: 'Check EBS encryption of the EC2 instance'
+  hint: 'Login to the provisioned AWS console'
   hintUrl: ''
   mitigationUrl: ''
-  key: sdpEbs
+  key: login
 -
-  name: '09. Confidential Document'
+  name: '02. Sample Data Website'
   category: 'Workshop'
   tags:
-    - Optional
-  description: 'Access a confidential document.'
+    - Mandatory
+  description: 'Open sample juice shop website'
   difficulty: 1
-  hint: 'Analyze and tamper with links in the application that deliver a file directly.'
-  hintUrl: 'https://pwning.owasp-juice.shop/part2/sensitive-data-exposure.html#access-a-confidential-document'
-  mitigationUrl: ~
-  key: directoryListingChallenge
-
+  hint: 'Open sample juice shop website'
+  hintUrl: ''
+  mitigationUrl: ''
+  key: juice
 -
-  name: '10. Login Admin'
+  name: '03. Sign in to Console'
+  category: 'Workshop'
+  tags:
+    - Mandatory
+  description: 'Sign in to solution web console'
+  difficulty: 1
+  hint: 'Sign in to solution web console'
+  hintUrl: ''
+  mitigationUrl: ''
+  key: console
+-
+  name: '04. Connect to Amazon Simple Storage Service(Amazon S3)'
+  category: 'Workshop'
+  tags:
+    - Mandatory
+  description: 'Connect to Amazon Simple Storage Service(Amazon S3) in AWS account'
+  difficulty: 1
+  hint: 'Connect to Amazon Simple Storage Service(Amazon S3) in AWS account'
+  hintUrl: ''
+  mitigationUrl: ''
+  key: s3
+-
+  name: '05. Connect to Amazon Relational Database Service (RDS)'
+  category: 'Workshop'
+  tags:
+    - Mandatory
+  description: 'Connect to Amazon Relational Database Service (RDS) in AWS account'
+  difficulty: 2
+  hint: 'Connect to Amazon Relational Database Service (RDS) in AWS account'
+  hintUrl: ''
+  mitigationUrl: ''
+  key: rds
+-
+  name: '06. Connect to Third-party Database'
+  category: 'Workshop'
+  tags:
+    - Mandatory
+  description: 'Connect to Third-party Database by JDBC'
+  difficulty: 3
+  hint: 'Connect to Third-party Database by JDBC'
+  hintUrl: ''
+  mitigationUrl: ''
+  key: jdbc
+-
+  name: '07. Define classification template'
+  category: 'Workshop'
+  tags:
+    - Mandatory
+  description: 'Define classification identifiers in detection template in web console'
+  difficulty: 3
+  hint: 'Define classification identifiers in detection template in web console'
+  hintUrl: ''
+  mitigationUrl: ''
+  key: identifiers
+-
+  name: '08. Run sensitive data discovery job'
+  category: 'Workshop'
+  tags:
+    - Mandatory
+  description: 'Run sensitive data discovery job for PII detection'
+  difficulty: 3
+  hint: 'Run sensitive data discovery job for PII detection'
+  hintUrl: ''
+  mitigationUrl: ''
+  key: runjob
+-
+  name: '09. Check summary result'
+  category: 'Workshop'
+  tags:
+    - Mandatory
+  description: 'Check summary result in dashboard'
+  difficulty: 1
+  hint: 'Check summary result in dashboard'
+  hintUrl: ''
+  mitigationUrl: ''
+  key: dashboard
+-
+  name: '10. Manually update catalog labels'
+  category: 'Workshop'
+  tags:
+    - Mandatory
+  description: 'Manually update catalog labels in data catalog'
+  difficulty: 1
+  hint: 'Manually update catalog labels in data catalog'
+  key: updatecatalog
+  hintUrl: ''
+  mitigationUrl: ''
+-
+  name: '11. Challenge - Connect to agent account'
   category: 'Workshop'
   tags:
     - Optional
-  description: 'Log in with the administrator''s user account.'
-  difficulty: 2
-  hint: 'Try different SQL Injection attack patterns depending whether you know the admin''s email address or not.'
-  hintUrl: 'https://pwning.owasp-juice.shop/part2/injection.html#log-in-with-the-administrators-user-account'
-  mitigationUrl: 'https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html'
-  key: loginAdminChallenge
-  tutorial:
-    order: 5
-
-
+  description: 'Challenge - Connect to agent account'
+  difficulty: 3
+  hint: 'Challenge - Connect to agent account'
+  key: agent
+  hintUrl: ''
+  mitigationUrl: ''
+-
+  name: '12. Challenge - Connect to Apache Hudi database'
+  category: 'Workshop'
+  tags:
+    - Optional
+  description: 'Challenge - Connect to Apache Hudi database'
+  difficulty: 5
+  hint: 'Challenge - Connect to Apache Hudi database'
+  key: hudi
+  hintUrl: ''
+  mitigationUrl: ''
